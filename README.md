@@ -4,4 +4,4 @@ Dockerfile with ubuntu, oracle jdk 8(not the openjdk) and useful tools like wget
 Usage
 -----------
 1. `docker pull nmicra\java8`
-2. Docker Hub [https://cloud.docker.com/u/nmicra/repository/docker/nmicra/java8]
+2. Docker Hub [https://hub.docker.com/r/nmicra/java8]
