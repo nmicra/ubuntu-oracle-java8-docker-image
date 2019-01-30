@@ -6,6 +6,8 @@ RUN apt-get install -y apt-utils
 RUN apt-get install -y net-tools
 RUN apt-get install -y iputils-ping
 RUN apt-get install -y curl
+RUN apt-get install -y iproute2
+RUN apt-get install less
 
 
 # Install Java.
