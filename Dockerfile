@@ -9,6 +9,8 @@ RUN apt-get install -y curl
 RUN apt-get install -y iproute2
 RUN apt-get install less
 RUN apt-get install -y nmap
+RUN apt-get install -y tzdata
+RUN apt-get install -y telnet
 
 
 # Install Java.
@@ -20,7 +22,9 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/oracle-jdk8-installer
   
-
+ENV TZ=Asia/Jerusalem
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 WORKDIR /work
 
 # Define commonly used JAVA_HOME variable
